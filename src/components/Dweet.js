@@ -40,6 +40,7 @@ const Dweet = ({dweetObj, isOwner}) => {
                 </>
             ) : (
                 <><h3>{dweetObj.text}</h3>
+                {dweetObj.attachmentUrl && (<img src={dweetObj.attachmentUrl} width="50px" height="50px"/>)}
                 {isOwner && (
                 <>
                 <button onClick={onDeleteClick}>Delete Dweet</button>
